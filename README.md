@@ -19,30 +19,32 @@ Works pretty well on most wallpapers. Some extract weird colors, that's just how
 ## Screenshots
 
 ![](./screenshots/1.png)
+---
 ![](./screenshots/2.png)
+---
 ![](./screenshots/3.png)
+---
 ![](./screenshots/4.png)
+---
 ![](./screenshots/5.png)
+---
 ![](./screenshots/6.png)
 
+---
 
 ## Installation
 
-### From source (works on any distro)
+### From source
 
 ```bash
-git clone https://github.com/yourusername/iris
+git clone https://github.com/Harman1307/iris
 cd iris
 pip install .
 ```
 
-### Arch (AUR)
+>On Arch Linux use pipx install . instead of pip install .
 
-```bash
-yay -S iris-colors
-```
-
----
+AUR package would be coming soon. 
 
 ## Usage
 

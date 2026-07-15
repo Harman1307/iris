@@ -42,8 +42,6 @@ cd iris
 pip install .
 ```
 
->On Arch Linux use pipx install . instead of pip install .
-
 ### From the AUR
 
 ```bash

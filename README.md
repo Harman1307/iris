@@ -44,7 +44,11 @@ pip install .
 
 >On Arch Linux use pipx install . instead of pip install .
 
-AUR package would be coming soon. 
+### From the AUR
+
+```bash
+yay -S iris-colors
+```
 
 ## Usage
 

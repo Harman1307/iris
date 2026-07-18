@@ -1,0 +1,12 @@
+[styling]
+theme-provider = "wayle"
+
+[styling.palette]
+bg="{bg}"
+fg="{fg}"
+surface="{surface}"
+dim="{dim}"
+accent="{accent}"
+red="{red}"
+green="{green}"
+yellow="{yellow}"

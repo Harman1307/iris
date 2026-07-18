@@ -232,7 +232,8 @@ This skips writing files and only prints JSON. Your QML handles the rest.
 ├── sequences                # Terminal escape sequences
 ├── colors-kitty.conf        # Kitty theme
 ├── colors-hypr.conf         # Hyprland colors
-└── colors-waybar.css        # Waybar colors
+├── colors-waybar.css        # Waybar colors
+└── colors-wayle.toml        # Wayle colors
 
 ~/.cache/wallpaper-colors/
 └── <hash>.json              # Cached colors per wallpaper

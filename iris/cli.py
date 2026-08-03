@@ -2,6 +2,7 @@ import argparse
 import json
 import sys
 import re
+import os
 from pathlib import Path
 from . import generator
 
@@ -73,7 +74,9 @@ def hex_to_rgb_string(hex_color):
 
 
 def render_templates(theme, palette):
-    template_dir = Path.home() / ".config" / "iris" / "templates"
+    config_dir = Path(os.getenv("XDG_CONFIG_HOME") or (Path.home() / ".config"))
+    template_dir = config_dir / "iris" / "templates"
+
     
     builtin_template_dir = Path(__file__).parent / "templates"
     

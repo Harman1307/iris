@@ -244,11 +244,21 @@ def sample_palette(img, debug=False):
         def wavg(arr, _w=w_i, _tw=total_w):
             return float((arr[mask] * _w).sum() / _tw)
 
+        # Hue is an angle: a weighted mean of the angles themselves wraps, so a cluster of red and blue pixels can
+        # land at green and be picked as the accent. Average unit vectors instead, weighting by saturation so the
+        # near-greys, whose hue is noise, do not pull the result.
+        hw = w_i * s_chan[mask]
+        if hw.sum() > 0:
+            rad = np.deg2rad(h_chan[mask])
+            h_mean = float(np.rad2deg(np.arctan2((np.sin(rad) * hw).sum(), (np.cos(rad) * hw).sum())) % 360.0)
+        else:
+            h_mean = 0.0
+
         entries.append({
             "L": wavg(L_chan),
             "a": wavg(a_chan),
             "b": wavg(b_chan),
-            "h": wavg(h_chan),
+            "h": h_mean,
             "s": wavg(s_chan),
             "l": wavg(lv),
             "c": wavg(lab_c),
